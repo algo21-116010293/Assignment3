@@ -61,7 +61,7 @@ Since the loss mainly comes from short contracts, we try to long only. The resul
 The result shows that the loss at the same time is very little. However, the return of this strategy is also limited, the largest of which is only 1.4 times than the initial.
 
 ## Further Analysis
-From the above, we guess that if we want to obtain high profit, the sharp loss may be not avoidable, which means we need to try to smooth it instead of getting rid of it. Further analysis can focuses on the method of producing signal. 
+From the above, we guess that if we want to obtain high profit, the sharp loss may be not avoidable, which means we need to try to smooth it instead of getting rid of it. Further analysis can focus on the method of producing signal. 
 
 ## Reference
 The idea of this repo is from a blog [Trading of Derivatives on VIX Index](http://blog.sina.com.cn/s/blog_8ffb0d960102wxlw.html), especially the part of Spread Strategy. However, this repo adds more on that. 
