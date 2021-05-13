@@ -38,7 +38,26 @@ As a result, we get a table like
 ![back testing result]()
 
 To visulize,
-*Plot: The daily Return of Back Testing witg*  
+*Plot: The daily Return of Back Testing with weight 0.5&0.5*  
 ![daily return]()
 
-From the result, we can see that thaerthere is a sudden drop at the end of Feb 2018, which leads the return to be negative. In real time, we will receive a margin call. Therefore, this strategy is not proper and we need to modify it so that at least the return will not be negative. 
+From the result, we can see that there is a period that the portfolio reaches high return at more than 15 times than the initial wealth. However, there is a sudden drop at the end of Feb 2018, which leads the return to be negative. In real time, we will receive a margin call. Therefore, this strategy is not proper and we need to modify it so that at least the return will not be negative. 
+
+## Improvement
+### 1. Change the Weight of Contracts 
+Since the future contracts of near-term bear more risk, we put less weight on it, say 0.05 on near-term contract, 0.95 on next-term contract. We get the result as below, 
+
+*Plot: The daily Return of Back Testing with Weight 0.05&0.95*  
+![daily return with weight 0.05]()
+
+It shows that at the end of Feb 2018, the great loss still exist but will not lead the account to be negative. 
+
+### 2. Long Only
+Since the loss mainly comes from short contracts, we try to long only. The result is
+
+*Plot: The daily Return of Back Testing by Longing Only*  
+![daily return by longing]()
+
+The result shows that the loss at the same time is very little. However, the return of this strategy is also limited, the largest of which is only 1.4 times than the initial.
+
+## Further Analysis
